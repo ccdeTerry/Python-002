@@ -11,5 +11,5 @@ class MaoyanItem(scrapy.Item):
     # name = scrapy.Field()
     # pass
     name= scrapy.Field()
-    star = scrapy.Field()
-    movieType= scrapy.Field()
+    movie_date = scrapy.Field()
+    movie_type= scrapy.Field()

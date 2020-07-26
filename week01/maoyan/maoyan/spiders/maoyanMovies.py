@@ -16,15 +16,15 @@ class MaoyanmoviesSpider(scrapy.Spider):
 
     def parse(self,response):
             movesInfo = Selector(response=response).xpath('//div[@class="movie-item-hover"]')
-            item = MaoyanItem()
             for movie in movesInfo[:11]:
+                items = MaoyanItem()
                 name =movie.xpath('./a/div/div[1]/span[@class="name "]/text()').extract()
-                star =movie.xpath('./a/div/div[1]/span[@class="score channel-detail-orange"]/i/text()').extract()
-                movieTpye =movie.xpath('./a/div/div[2]/text()').extract()
-                item['name'] = name
-                item['star'] = star[0]+star[1]
-                item['movieTpye'] = movieTpye
-                yield item
-
+                movie_date =movie.xpath('./a/div/div[@class="movie-hover-title movie-hover-brief"]/text()').extract()[1].strip()
+                movie_type =movie.xpath('./a/div/div[2]/text()').extract()[1].strip()
+                items['name'] = name
+                items['movie_date'] = movie_date
+                items['movie_type'] = movie_type
+                # print(items)
+                yield items
 
         # 

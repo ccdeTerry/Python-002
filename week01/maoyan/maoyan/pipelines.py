@@ -12,9 +12,8 @@ class MaoyanPipeline:
     def process_item(self, item, spider):
         # return item
         name = item['name']
-        star = item['star']
-        movieType = item['movieType']
-        movieList[name,star,movieType]
+        movie_date = item['movie_date']
+        movie_type = item['movie_type']
+        movieList=[name,movie_date,movie_type]
         moviesRes = pandas.DataFrame(data=movieList)
-        print(moviesRes)
         moviesRes .to_csv('./maoyanScrapy.csv',mode='a',encoding='utf8',index=False,header=False)
