@@ -8,4 +8,5 @@ class MaoyanmoviesSpider(scrapy.Spider):
 
     def parse(self, response):
         # pass
-        
+
+            uri = 
