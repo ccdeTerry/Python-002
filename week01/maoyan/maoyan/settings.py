@@ -31,16 +31,17 @@ DOWNLOAD_DELAY = 3
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
+DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-#}
+'Cookie':'uuid_n_v=v1; uuid=EAC4D020CCE711EABD387F49F1B53159CF587246B3F64D4F8CE9E7D8932E236F; _csrf=705bd7a71ae9521a11cdd30df17b76380bae1309ce1d8e52e3223fb23fa86dfc; _lxsdk_cuid=1737bd949a0c8-0a212ad837e357-39770e5a-1fa400-1737bd949a1c8; _lxsdk=EAC4D020CCE711EABD387F49F1B53159CF587246B3F64D4F8CE9E7D8932E236F; mojo-uuid=2e77cf48a92acc999d158819230ad258; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1595510705,1595737211; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1595737211; __mta=150822153.1595510705234.1595510705234.1595737211350.2; _lxsdk_s=1738994e315-7d3-66-adc%7C%7C1'
+}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
